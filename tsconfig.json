@@ -6,7 +6,11 @@
     },
     "include": ["src/**/*"],
     "typedocOptions": {
-        "entryPoints": [ "src/stacks-editor/editor.ts", "src/rich-text/editor.ts" ],
+        "entryPointStrategy": "Expand",
+        "entryPoints": [ "src" ],
+        "exclude": "src/index.ts",
+        "excludePrivate": true,
+        "excludeNotDocumented": true,
         "out": "docs"
     }
 }
